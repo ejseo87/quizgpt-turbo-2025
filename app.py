@@ -15,8 +15,9 @@ st.set_page_config(
 )
 
 # Create necessary directories in /tmp
-CACHE_DIR = "./.cache"
-os.makedirs("./.cache", exist_ok=True)
+# CACHE_DIR = "./.cache"
+CACHE_DIR = "/tmp/cache"
+os.makedirs(CACHE_DIR, exist_ok=True)
 os.makedirs(os.path.join(CACHE_DIR, "files"), exist_ok=True)
 
 function = {
