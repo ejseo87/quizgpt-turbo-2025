@@ -219,3 +219,7 @@ else:
                     f"You got {correct_answers} out of "
                     f"{len(response['questions'])} questions correct."
                 )
+
+st.markdown("---")
+st.markdown(
+    "GitHub: [https://github.com/ejseo87/quizgpt-turbo-2025](https://github.com/ejseo87/quizgpt-turbo-2025)")
