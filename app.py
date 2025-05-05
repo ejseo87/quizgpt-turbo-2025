@@ -125,6 +125,9 @@ def wiki_search(topic):
 
 
 with st.sidebar:
+    st.markdown(
+        "GitHub: [https://github.com/ejseo87/quizgpt-turbo-2025](https://github.com/ejseo87/quizgpt-turbo-2025)")
+    st.markdown("---")
     openai_api_key = st.text_input("OpenAI API Key", type="password")
 
 # Initialize ChatOpenAI with API key from user input
@@ -219,7 +222,3 @@ else:
                     f"You got {correct_answers} out of "
                     f"{len(response['questions'])} questions correct."
                 )
-
-st.markdown("---")
-st.markdown(
-    "GitHub: [https://github.com/ejseo87/quizgpt-turbo-2025](https://github.com/ejseo87/quizgpt-turbo-2025)")
