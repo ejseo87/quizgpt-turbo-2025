@@ -15,8 +15,8 @@ st.set_page_config(
 )
 
 # Create necessary directories in /tmp
-# CACHE_DIR = "./.cache"
-CACHE_DIR = "/tmp/cache"
+# CACHE_DIR = "./.cache" # for local
+CACHE_DIR = "/tmp/cache"  # for streamlit
 os.makedirs(CACHE_DIR, exist_ok=True)
 os.makedirs(os.path.join(CACHE_DIR, "files"), exist_ok=True)
 
@@ -191,7 +191,6 @@ else:
     response = run_quiz_chain(docs, level, topic if topic else file.name)
     response = response.additional_kwargs["function_call"]["arguments"]
     response = json.loads(response)
-    st.write(response)
     correct_answers = 0
 
     with st.form("qustions_form"):
